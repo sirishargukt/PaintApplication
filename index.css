@@ -3,33 +3,37 @@ body {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 100vh;
-    margin: 0;
-    background: #f0f0f0;
-    padding: 20px; 
+    height: 20vh;
+    /* padding: 20px;  */
+    padding-left:20px;
 }
-
 .container {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .buttons {
     display: flex;
-    gap: 10px; 
+    /* gap: 10px;  */
 }
 
 .file, .view {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     background-color: azure;
-    padding: 5px;
-    border-radius: 5px;
+    /* padding: 5px; */
+    border-radius: 2px;
+   
+}
+.view{
+    border-radius: 2px;
+    margin-left:10px;
+
 }
 
 button {
-    padding: 10px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -37,10 +41,9 @@ button {
     transition: background 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 5px; /* Add space between icon and text */
+    gap: 5px; 
+    padding-right:20px
 }
-
-/* Unified Background Color for File and Home Buttons */
 .file_button {
     background: linear-gradient(135deg, hsl(194, 85%, 43%) 0%, #2575fc 100%);
     color: white;
@@ -61,7 +64,7 @@ button:hover {
 /* Section Styles */
 .sections {
     display: flex;
-    gap: 10px; /* Add gap between sections */
+    gap: 5px;  /*Add gap between sections */
     margin-top: 10px;
     font-size: 10px;
 }
@@ -107,7 +110,6 @@ button:hover {
     flex-direction: column;
     gap: 5px; 
 }
-
 .text {
     text-align: center;
 }
@@ -122,7 +124,7 @@ button:hover {
 .shapes .row_shape {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    /* gap: 5px; */
     justify-content: center;
     padding-bottom: 5px;
 }
@@ -144,7 +146,7 @@ button:hover {
 .size_button {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    /* gap: 2px; */
     padding: 10px;
     background: none;
     border: none;
@@ -172,14 +174,12 @@ button:hover {
 .line4 {
     height: 8px;
 }
-
 .color_button {
     width: 30px;
     height: 30px;
     border: 1px solid black;
     cursor: pointer;
 }
-
 .color1 {
     background-color: black;.section {
         display: flex;
@@ -194,33 +194,26 @@ button:hover {
 .color2 {
     background-color: white;
 }
-
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 5px; */
     background-color: lightgrey;
     padding: 5px;
     border-radius: 5px;
 }
-
 .section span {
     font-size: 10px;
     text-align: center;
 }
-
-/*  */
 body {
     font-family: Arial, sans-serif;
 }
-
 .colors {
     display: flex;
     flex-wrap: wrap;
 }
 .edit-colors-btn {
-    /* padding: 5px 10px; */
     font-size: 14px;
     cursor: pointer;
 }
@@ -241,3 +234,92 @@ body {
     border: 2px solid hsl(0, 8%, 77%); /* Border around each color swatch */
     box-sizing: border-box;
 }
+.color-palette {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet), linear-gradient(to top, #000, transparent);
+    background-blend-mode: multiply;
+    border: 1px solid #ccc;
+    /* position: relative; */
+}
+.box {
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Box background color */   
+}
+.gradient-droplet {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(120deg, yellow, pink, purple, cyan, blue);
+    clip-path: path('M 10 0 C 15 0, 20 5, 20 10 C 20 15, 10 30, 10 30 C 10 30, 0 15, 0 10 C 0 5, 5 0, 10 0');
+}
+.board {
+    position: relative;
+    margin-top: 10px;  
+}
+.inner {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    padding: 10px;  
+}
+canvas {
+    background-color: white; /* Adds a white background */  
+}
+canvas.crosshair {
+    cursor: crosshair; /* Cursor for drawing */
+}
+#saveButton {
+    display: none;
+}
+/* Media Queries */
+@media (max-width: 300px) {
+    .container {
+        display:block;
+    }
+    
+    .board {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file, .view {
+        width: 100%;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .sections {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 5px;
+    }
+
+    .shape, .color_button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .color-swatch {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
