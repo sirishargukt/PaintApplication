@@ -277,7 +277,7 @@ canvas.crosshair {
     display: none;
 }
 /* Media Queries */
-@media (max-width: 300px) {
+/* @media (max-width: 300px) {
     .container {
         display:block;
     }
@@ -286,8 +286,8 @@ canvas.crosshair {
         flex-direction: column;
     }
 }
-
-@media (max-width: 480px) {
+ */
+/* @media (max-width: 480px) {
     .buttons {
         flex-direction: column;
         align-items: flex-start;
@@ -320,17 +320,14 @@ canvas.crosshair {
         width: 20px;
         height: 20px;
     }
-}
+} */
 
-/* 
 
 
 
 @media (max-width: 768px) {
-    /* Existing mobile styles */
-    
     canvas {
         width: 100%;
         height: auto;
     }
-} */
+}
