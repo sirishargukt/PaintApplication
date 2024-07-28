@@ -278,3 +278,32 @@ canvas.crosshair {
 #saveButton {
     display: none;
 }
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 480px) {
+    .color_row1, .color_row2, .color_row3 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px) {
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+body {
+    font-size: 16px;
+}
+
+button {
+    font-size: 0.875em;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
