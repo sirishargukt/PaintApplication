@@ -1,57 +1,56 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 20vh;
-    /* padding: 20px;  */
-    padding-left:20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.main-card {
+    max-width: 100%;
+    padding: 10px;
+}
+
 .container {
-    /* display: flex; */
-    flex-direction: column;
-    /* gap: 5px; */
+    width: 100%;
 }
 
 .buttons {
     display: flex;
-    /* gap: 10px;  */
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .file, .view {
     display: flex;
     gap: 8px;
     background-color: azure;
-    /* padding: 5px; */
     border-radius: 2px;
-   
 }
-.view{
-    border-radius: 2px;
-    margin-left:10px;
 
+.view {
+    margin-left: 10px;
 }
 
 button {
-    padding: 5px;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 12px;
     transition: background 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 5px; 
-    padding-right:20px
+    gap: 5px;
 }
+
 .file_button {
     background: linear-gradient(135deg, hsl(194, 85%, 43%) 0%, #2575fc 100%);
     color: white;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Distinct Background Color for View Button */
-.view_button ,.home_button{
+.view_button, .home_button {
     background: linear-gradient(135deg, hsla(345, 43%, 95%, 0.925) 0%, hwb(0 94% 3%) 100%);
     color: black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -61,273 +60,203 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Section Styles */
 .sections {
     display: flex;
-    gap: 5px;  /*Add gap between sections */
+    flex-wrap: wrap;
+    gap: 5px;
     margin-top: 10px;
-    font-size: 10px;
 }
 
 .section {
     background-color: lightgrey;
-    /* padding: 10px; */
     border-radius: 5px;
-}
-.section1 {
-    background-color: lightgrey;
-    border-radius: 5px;
+    padding: 5px;
+    flex: 1 1 auto;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.section h3 {
-    margin: 0;
-}
-
-.clipping {
+.clipping, .image_clipping {
     display: flex;
     align-items: center;
-    gap: 5px; 
+    gap: 5px;
 }
 
 .pcc {
     text-align: center;
 }
 
-.cut_copy {
+.cut_copy, .image_options {
     display: flex;
     flex-direction: column;
-    gap: 5px; 
+    gap: 5px;
 }
 
-.image_clipping {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-}
-
-.image_options {
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-}
 .text {
     text-align: center;
+    font-size: 10px;
+    margin-top: 5px;
 }
 
-.row {
-    display: flex;
-    gap: 2px;
-    justify-content: center;
-    padding-bottom: 10px;   
-}
-
-.shapes .row_shape {
+.row, .row1, .row2, .row3 {
     display: flex;
     flex-wrap: wrap;
-    /* gap: 5px; */
-    justify-content: center;
-    padding-bottom: 5px;
-}
-
-.row1, .row2, .row3 {
-    display: flex;
-    gap: 5px;
+    gap: 2px;
     justify-content: center;
     padding-bottom: 5px;
 }
 
 .shape {
     display: inline-block;
-    width: 30px; /* Reduced width */
-    height: 30px; /* Reduced height */
+    width: 25px;
+    height: 25px;
     border: 1px solid black;
     text-align: center;
+    font-size: 14px;
 }
+
 .size_button {
     display: flex;
     flex-direction: column;
-    /* gap: 2px; */
-    padding: 10px;
+    padding: 5px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
 .line {
-    width: 40px;
-    height: 4px;
+    width: 30px;
     background-color: black;
 }
 
-.line1 {
-    height: 2px;
-}
+.line1 { height: 2px; }
+.line2 { height: 4px; }
+.line3 { height: 6px; }
+.line4 { height: 8px; }
 
-.line2 {
-    height: 4px;
-}
-
-.line3 {
-    height: 6px;
-}
-
-.line4 {
-    height: 8px;
-}
 .color_button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border: 1px solid black;
     cursor: pointer;
 }
-.color1 {
-    background-color: black;.section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* gap: 5px; */
-        background-color: lightgrey;
-        padding: 10px;
-        border-radius: 5px;
-    }
-}
-.color2 {
-    background-color: white;
-}
-.section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightgrey;
-    padding: 5px;
-    border-radius: 5px;
-}
-.section span {
-    font-size: 10px;
-    text-align: center;
-}
-body {
-    font-family: Arial, sans-serif;
-}
+
+.color1 { background-color: black; }
+.color2 { background-color: white; }
+
 .colors {
     display: flex;
     flex-wrap: wrap;
 }
-.edit-colors-btn {
-    font-size: 14px;
-    cursor: pointer;
-}
-.section.colors {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
+
 .color_row1, .color_row2, .color_row3 {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
 }
+
 .color-swatch {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 2px;
     cursor: pointer;
-    border: 2px solid hsl(0, 8%, 77%); /* Border around each color swatch */
-    box-sizing: border-box;
+    border: 1px solid hsl(0, 8%, 77%);
 }
+
 .color-palette {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet), linear-gradient(to top, #000, transparent);
     background-blend-mode: multiply;
     border: 1px solid #ccc;
-    /* position: relative; */
 }
+
 .box {
-    width: 30px; /* Adjust width as needed */
-    height: 30px; /* Adjust height as needed */
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0; /* Box background color */   
+    background-color: #f0f0f0;
 }
+
 .gradient-droplet {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background: linear-gradient(120deg, yellow, pink, purple, cyan, blue);
     clip-path: path('M 10 0 C 15 0, 20 5, 20 10 C 20 15, 10 30, 10 30 C 10 30, 0 15, 0 10 C 0 5, 5 0, 10 0');
 }
+
 .board {
-    position: relative;
-    margin-top: 10px;  
+    width: 100%;
+    margin-top: 10px;
 }
+
 .inner {
     background-color: #ccc;
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    padding: 10px;  
+    padding: 10px;
 }
+
 canvas {
-    background-color: white; /* Adds a white background */  
+    width: 100%;
+    height: auto;
+    background-color: white;
 }
+
 canvas.crosshair {
-    cursor: crosshair; /* Cursor for drawing */
+    cursor: crosshair;
 }
+
 #saveButton {
     display: none;
 }
-/* Media Queries */
-/* @media (max-width: 300px) {
-    .container {
-        display:block;
-    }
-    
-    .board {
-        flex-direction: column;
-    }
-}
- */
-/* @media (max-width: 480px) {
+
+@media (max-width: 768px) {
     .buttons {
         flex-direction: column;
-        align-items: flex-start;
     }
 
-    .file, .view {
-        width: 100%;
-        justify-content: center;
-    }
-
-    button {
-        font-size: 10px;
-        padding: 5px;
+    .view {
+        margin-left: 0;
+        margin-top: 5px;
     }
 
     .sections {
-        font-size: 10px;
+        flex-direction: column;
     }
 
     .section {
-        padding: 5px;
-    }
-
-    .shape, .color_button {
-        width: 20px;
-        height: 20px;
-    }
-
-    .color-swatch {
-        width: 20px;
-        height: 20px;
-    }
-} */
-
-
-
-
-@media (max-width: 768px) {
-    canvas {
         width: 100%;
-        height: auto;
+    }
+
+    .shape, .color_button, .color-swatch {
+        width: 20px;
+        height: 20px;
+    }
+
+    .line {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 10px;
+    }
+
+    .shape, .color_button, .color-swatch {
+        width: 18px;
+        height: 18px;
+    }
+
+    .line {
+        width: 20px;
+    }
+
+    .text {
+        font-size: 9px;
     }
 }
