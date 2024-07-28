@@ -1,24 +1,19 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.main-card {
-    max-width: 100%;
-    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 20vh;
+    padding-left: 20px;
 }
 
 .container {
-    width: 100%;
+    flex-direction: column;
 }
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-bottom: 10px;
 }
 
 .file, .view {
@@ -29,19 +24,21 @@ body {
 }
 
 .view {
+    border-radius: 2px;
     margin-left: 10px;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 10px;
     transition: background 0.3s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 5px;
+    padding-right: 20px;
 }
 
 .file_button {
@@ -60,25 +57,29 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* Section Styles */
 .sections {
     display: flex;
-    flex-wrap: wrap;
     gap: 5px;
     margin-top: 10px;
+    font-size: 10px;
 }
 
 .section {
     background-color: lightgrey;
     border-radius: 5px;
-    padding: 5px;
-    flex: 1 1 auto;
-    min-width: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.clipping, .image_clipping {
+.section1 {
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.section h3 {
+    margin: 0;
+}
+
+.clipping {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -88,7 +89,19 @@ button:hover {
     text-align: center;
 }
 
-.cut_copy, .image_options {
+.cut_copy {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.image_clipping {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.image_options {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -96,87 +109,138 @@ button:hover {
 
 .text {
     text-align: center;
-    font-size: 10px;
-    margin-top: 5px;
 }
 
-.row, .row1, .row2, .row3 {
+.row {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.shapes .row_shape {
     display: flex;
     flex-wrap: wrap;
-    gap: 2px;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    gap: 5px;
     justify-content: center;
     padding-bottom: 5px;
 }
 
 .shape {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
     text-align: center;
-    font-size: 14px;
 }
 
 .size_button {
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 10px;
     background: none;
     border: none;
     cursor: pointer;
 }
 
 .line {
-    width: 30px;
+    width: 40px;
+    height: 4px;
     background-color: black;
 }
 
-.line1 { height: 2px; }
-.line2 { height: 4px; }
-.line3 { height: 6px; }
-.line4 { height: 8px; }
+.line1 {
+    height: 2px;
+}
+
+.line2 {
+    height: 4px;
+}
+
+.line3 {
+    height: 6px;
+}
+
+.line4 {
+    height: 8px;
+}
 
 .color_button {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: 1px solid black;
     cursor: pointer;
 }
 
-.color1 { background-color: black; }
-.color2 { background-color: white; }
+.color1 {
+    background-color: black;
+}
+
+.color2 {
+    background-color: white;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.section span {
+    font-size: 10px;
+    text-align: center;
+}
 
 .colors {
     display: flex;
     flex-wrap: wrap;
 }
 
+.edit-colors-btn {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.section.colors {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .color_row1, .color_row2, .color_row3 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
+    gap: 10px;
 }
 
 .color-swatch {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 2px;
     cursor: pointer;
-    border: 1px solid hsl(0, 8%, 77%);
+    border: 2px solid hsl(0, 8%, 77%);
+    box-sizing: border-box;
 }
 
 .color-palette {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet), linear-gradient(to top, #000, transparent);
     background-blend-mode: multiply;
     border: 1px solid #ccc;
 }
 
 .box {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,25 +248,26 @@ button:hover {
 }
 
 .gradient-droplet {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background: linear-gradient(120deg, yellow, pink, purple, cyan, blue);
     clip-path: path('M 10 0 C 15 0, 20 5, 20 10 C 20 15, 10 30, 10 30 C 10 30, 0 15, 0 10 C 0 5, 5 0, 10 0');
 }
 
 .board {
-    width: 100%;
+    position: relative;
     margin-top: 10px;
 }
 
 .inner {
     background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
 }
 
 canvas {
-    width: 100%;
-    height: auto;
     background-color: white;
 }
 
@@ -214,49 +279,81 @@ canvas.crosshair {
     display: none;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
-    .buttons {
+    .container {
         flex-direction: column;
     }
 
-    .view {
-        margin-left: 0;
-        margin-top: 5px;
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file, .view {
+        width: 100%;
+        justify-content: center;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 5px;
     }
 
     .sections {
         flex-direction: column;
+        font-size: 12px;
     }
 
     .section {
         width: 100%;
+        padding: 10px;
     }
 
-    .shape, .color_button, .color-swatch {
+    .shape, .color_button {
         width: 20px;
         height: 20px;
     }
 
-    .line {
-        width: 25px;
+    .color-swatch {
+        width: 20px;
+        height: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file, .view {
+        width: 100%;
+        justify-content: center;
+    }
+
     button {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .sections {
+        flex-direction: column;
         font-size: 10px;
     }
 
-    .shape, .color_button, .color-swatch {
-        width: 18px;
-        height: 18px;
+    .section {
+        width: 100%;
+        padding: 5px;
     }
 
-    .line {
+    .shape, .color_button {
         width: 20px;
+        height: 20px;
     }
 
-    .text {
-        font-size: 9px;
+    .color-swatch {
+        width: 20px;
+        height: 20px;
     }
 }
