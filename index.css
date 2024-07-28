@@ -278,37 +278,3 @@ canvas.crosshair {
 #saveButton {
     display: none;
 }
-/* updated css */
-
-
-@media (min-width: 600px) {
-    body {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        height: 100vh;
-        padding: 20px;
-    }
-
-    .container {
-        width: 80%;
-    }
-
-    .buttons {
-        justify-content: space-between;
-    }
-
-    .sections {
-        flex-direction: row;
-        gap: 20px;
-    }
-
-    .section {
-        flex: 1;
-    }
-
-    .cut_copy, .image_options {
-        flex-direction: row;
-    }
-}
-
