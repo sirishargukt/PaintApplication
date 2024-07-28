@@ -323,3 +323,14 @@ canvas.crosshair {
 }
 
 
+
+
+
+@media (max-width: 768px) {
+    /* Existing mobile styles */
+    
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+}
