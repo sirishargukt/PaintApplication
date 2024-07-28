@@ -182,3 +182,41 @@ document.getElementById('saveButton').addEventListener('click', saveCanvasImage)
         saveCanvasState();
     });
 });
+
+canvas.addEventListener('touchstart', handleStart);
+canvas.addEventListener('touchmove', handleMove);
+canvas.addEventListener('touchend', handleEnd);
+
+function handleStart(e) {
+    e.preventDefault();
+    const touch = e.touches[0];
+    startDrawing(touch);
+}
+
+function handleMove(e) {
+    e.preventDefault();
+    const touch = e.touches[0];
+    draw(touch);
+}
+
+
+
+
+
+
+
+
+
+function resizeCanvas() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    // Redraw canvas content if necessary
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas(); // Call on initial load
+
+function handleEnd(e) {
+    e.preventDefault();
+    stopDrawing();
+}
