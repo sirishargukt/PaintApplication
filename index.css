@@ -282,6 +282,88 @@ canvas {
     max-width: 100%;
     height: auto;
 }
+
+
+
+
+
+
+/*  */
+
+@media screen and (max-width: 768px) {
+    body {
+      height: auto;
+      padding: 10px;
+    }
+    .container {
+      width: 100%;
+    }
+    .sections {
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .section {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tools {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    .section {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+    .section span {
+      font-size: 14px;
+    }
+  }
+
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
+
 @media screen and (max-width: 480px) {
     .color_row1, .color_row2, .color_row3 {
         flex-wrap: wrap;
@@ -306,4 +388,4 @@ button {
     body {
         font-size: 14px;
     }
-}
+} */
